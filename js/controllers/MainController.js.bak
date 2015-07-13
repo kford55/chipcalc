@@ -1,0 +1,291 @@
+app.controller('MainController', [ $scope, function($scope){
+	$scope.ingredients = [
+												{
+													$scope.name = "flourTort";
+													$scope.calories = 300;
+													$scope.totalFat = 10;
+													$scope.saturated = 1;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 690;
+													$scope.carbs = 46;
+													$scope.fiber = 3;
+													$scope.sugar = 0;
+													$scope.protein = 7;
+												},
+												{
+													$scope.name = "3crispyCorn";
+													$scope.calories = 210;
+													$scope.totalFat = 7.5;
+													$scope.saturated = 3;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 30;
+													$scope.carbs =30;
+													$scope.fiber = 6;
+													$scope.sugar = 0.5;
+													$scope.protein = 3;
+												},
+												{
+													$scope.name = "3softCorn";
+													$scope.calories = 210;
+													$scope.totalFat = 0;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 30;
+													$scope.carbs = 45;
+													$scope.fiber = 6;
+													$scope.sugar = 0;
+													$scope.protein = 3;
+												},
+												{
+													$scope.name = "3softFlour";
+													$scope.calories = 255;
+													$scope.totalFat = 7.5;
+													$scope.saturated = 3;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 570;
+													$scope.carbs = 39;
+													$scope.fiber = 2;
+													$scope.sugar = 0;
+													$scope.protein = 6;
+												},
+												{
+													$scope.name = "chicken";
+													$scope.calories = 180;
+													$scope.totalFat = 7;
+													$scope.saturated = 3;
+													$scope.trans = 0;
+													$scope.cholesterol = 125;
+													$scope.sodium = 310;
+													$scope.carbs = 0;
+													$scope.fiber = 0.5;
+													$scope.sugar = 0;
+													$scope.protein = 32;
+												},
+												{
+													$scope.name = "steak";
+													$scope.calories = 190;
+													$scope.totalFat = 6.5;
+													$scope.saturated = 2;
+													$scope.trans = 0;
+													$scope.cholesterol = 65;
+													$scope.sodium = 320;
+													$scope.carbs = 2;
+													$scope.fiber = 0;
+													$scope.sugar = 1;
+													$scope.protein = 30;
+												},
+												{
+													$scope.name = "carnitas";
+													$scope.calories = 210;
+													$scope.totalFat = 12;
+													$scope.saturated = 6.5;
+													$scope.trans = 0;
+													$scope.cholesterol = 65;
+													$scope.sodium = 450;
+													$scope.carbs = 0;
+													$scope.fiber = 0;
+													$scope.sugar = 0;
+													$scope.protein = 23;
+												},
+												{
+													$scope.name = "barbacoa";
+													$scope.calories = 165;
+													$scope.totalFat = 7;
+													$scope.saturated = 2.5;
+													$scope.trans = 0;
+													$scope.cholesterol = 65;
+													$scope.sodium = 530;
+													$scope.carbs = 2;
+													$scope.fiber = 1;
+													$scope.sugar = 0;
+													$scope.protein = 24;
+												},
+												{
+													$scope.name = "sofritas";
+													$scope.calories = 145;
+													$scope.totalFat = 10;
+													$scope.saturated = 1.5;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 555;
+													$scope.carbs = 9;
+													$scope.fiber = 3.5;
+													$scope.sugar = 4.5;
+													$scope.protein = 8;
+												},
+												{
+													$scope.name = "whiteRice";
+													$scope.calories = 185;
+													$scope.totalFat = 4;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 375;
+													$scope.carbs = 34;
+													$scope.fiber = 1;
+													$scope.sugar = 0;
+													$scope.protein = 3.5;
+												},
+												{
+													$scope.name = "brownRice";
+													$scope.calories = 200;
+													$scope.totalFat = 7;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 165;
+													$scope.carbs = 32;
+													$scope.fiber = 2.5;
+													$scope.sugar = 0.5;
+													$scope.protein = 3.5;
+												},
+												{
+													$scope.name = "blackBeans";
+													$scope.calories = 120;
+													$scope.totalFat = 1;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 260;
+													$scope.carbs = 22;
+													$scope.fiber = 12;
+													$scope.sugar = 1;
+													$scope.protein = 7;
+												},
+												{
+													$scope.name = "pintoBeans";
+													$scope.calories = 115;
+													$scope.totalFat = 1;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 300;
+													$scope.carbs = 21;
+													$scope.fiber = 10;
+													$scope.sugar = 1;
+													$scope.protein = 6;
+												},
+												{
+													$scope.name = "fajitaVeg";
+													$scope.calories = 20;
+													$scope.totalFat = 0.5;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 170;
+													$scope.carbs = 4;
+													$scope.fiber = 1;
+													$scope.sugar = 2;
+													$scope.protein = 1;
+												},
+												{
+													$scope.name = "tomatoSalsa";
+													$scope.calories = 20;
+													$scope.totalFat = 0;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 210;
+													$scope.carbs = 5;
+													$scope.fiber = 1;
+													$scope.sugar = 3;
+													$scope.protein = 1;
+												},
+												{
+													$scope.name = "chiliCornSalsa";
+													$scope.calories = 80;
+													$scope.totalFat = 1.5;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 300;
+													$scope.carbs = 16;
+													$scope.fiber = 3;
+													$scope.sugar = 4;
+													$scope.protein = 3;
+												},
+												{
+													$scope.name = "tomatilloGreen";
+													$scope.calories = 15;
+													$scope.totalFat = 0;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 255;
+													$scope.carbs = 4;
+													$scope.fiber = 0;
+													$scope.sugar = 1.5;
+													$scope.protein = 0;
+												},
+												{
+													$scope.name = "tomatilloRed";
+													$scope.calories = 30;
+													$scope.totalFat = 0;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 500;
+													$scope.carbs = 4;
+													$scope.fiber = 1.5;
+													$scope.sugar = 0;
+													$scope.protein = 0;
+												},
+												{
+													$scope.name = "sourCream";
+													$scope.calories = 115;
+													$scope.totalFat = 9.5;
+													$scope.saturated = 7;
+													$scope.trans = 0;
+													$scope.cholesterol = 40;
+													$scope.sodium = 30;
+													$scope.carbs = 1;
+													$scope.fiber = 0;
+													$scope.sugar = 2;
+													$scope.protein = 2;
+												},
+												{
+													$scope.name = "cheese";
+													$scope.calories = 100;
+													$scope.totalFat = 7.5;
+													$scope.saturated = 5;
+													$scope.trans = 0;
+													$scope.cholesterol = 30;
+													$scope.sodium = 190;
+													$scope.carbs = 1;
+													$scope.fiber = 0;
+													$scope.sugar = 0;
+													$scope.protein = 6;
+												},
+												{
+													$scope.name = "guacamole";
+													$scope.calories = 230;
+													$scope.totalFat = 22;
+													$scope.saturated = 3.5;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 375;
+													$scope.carbs = 8;
+													$scope.fiber = 6;
+													$scope.sugar = 1;
+													$scope.protein = 2;
+												},
+												{
+													$scope.name = "lettuce";
+													$scope.calories = 10;
+													$scope.totalFat = 0;
+													$scope.saturated = 0;
+													$scope.trans = 0;
+													$scope.cholesterol = 0;
+													$scope.sodium = 0;
+													$scope.carbs = 2;
+													$scope.fiber = 1;
+													$scope.sugar = 1;
+													$scope.protein = 1;
+												}
+											];
+	
+}]);
