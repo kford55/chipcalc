@@ -1,4 +1,4 @@
-myApp.controller('MainController', ['$scope', function($scope){
+myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope, $modal, $log){
 	$scope.ingredients = [
 												{
 													name:"flourTort",
@@ -340,9 +340,38 @@ myApp.controller('MainController', ['$scope', function($scope){
         											var obj = $scope.ingredients[i];
         											obj.amount = 0;
     											}
-    											for(var key in $scope.total){
-    												$scope.total.key = 0;
-        										}
+    											for(key in $scope.total){
+    												$scope.total[key] = 0;
+    											}
+    											
 											};
-	
+											
+
+  $scope.animationsEnabled = true;
+
+  $scope.open = function (size) {
+
+    var modalInstance = $modal.open({
+      animation: true,
+      templateUrl: 'template.html',
+      controller: ['$scope', '$modalInstance', 'items', 'testitems', function($scope, $modalInstance, items, testitems) {
+      	$scope.total = items;
+      }],
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.total;
+        }, 
+        testitems: function() {
+        	return "mytest";
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
 }]);

@@ -1,0 +1,22 @@
+{
+  "name": "chipcalc",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kford55/chipcalc",
+  "authors": [
+    "Kenneth Ford <kenneth.ford93@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.0"
+  }
+}
