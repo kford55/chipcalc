@@ -1,7 +1,10 @@
-myApp.directive('ingredients', function() { 
+myApp.directive('ingredient', function() { 
   return { 
     restrict: 'E', 
-    scope: {}, 
+    scope: {
+    	ingred:'=',
+    	func:'='
+    }, 
     templateUrl: 'js/directives/ingredient.html',
   };
 });

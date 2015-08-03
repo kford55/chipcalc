@@ -1,7 +1,6 @@
 myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope, $modal, $log){
-	$scope.ingredients = [
-		{
-			name:"Flour Tortilla",
+	$scope.ingredients ={
+		"Flour Tortilla":{
 			calories:300,
 			totalFat:10,
 			saturated:1,
@@ -14,8 +13,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:7,
 			amount:0
 		},
-		{
-			name:"3 Crispy Corn Tortillas",
+		"3 Crispy Corn Tortillas":{
 			calories:210,
 			totalFat:7.5,
 			saturated:3,
@@ -28,8 +26,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:3,
 			amount:0
 		},
-		{
-			name:"3 Soft Corn Tortillas",
+		"3 Soft Corn Tortillas":{
 			calories:210,
 			totalFat:0,
 			saturated:0,
@@ -42,8 +39,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:3,
 			amount:0
 		},
-		{
-			name:"3 Soft Flour Tortillas",
+		"3 Soft Flour Tortillas":{
 			calories:255,
 			totalFat:7.5,
 			saturated:3,
@@ -56,8 +52,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:6,
 			amount:0
 		},
-		{
-			name:"Chicken",
+		"Chicken":{
 			calories:180,
 			totalFat:7,
 			saturated:3,
@@ -70,8 +65,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:32,
 			amount:0
 		},
-		{
-			name:"Steak",
+		"Steak":{
 			calories:190,
 			totalFat:6.5,
 			saturated:2,
@@ -84,8 +78,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:30,
 			amount:0
 		},
-		{
-			name:"Carnitas",
+		"Carnitas":{
 			calories:210,
 			totalFat:12,
 			saturated:6.5,
@@ -98,8 +91,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:23,
 			amount:0
 		},
-		{
-			name:"Barbacoa",
+		"Barbacoa":{
 			calories:165,
 			totalFat:7,
 			saturated:2.5,
@@ -112,8 +104,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:24,
 			amount:0
 		},
-		{
-			name:"Sofritas",
+		"Sofritas":{
 			calories:145,
 			totalFat:10,
 			saturated:1.5,
@@ -126,8 +117,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:8,
 			amount:0
 		},
-		{
-			name:"White Rice",
+		"White Rice":{
 			calories:185,
 			totalFat:4,
 			saturated:0,
@@ -140,8 +130,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:3.5,
 			amount:0
 		},
-		{
-			name:"Brown Rice",
+		"Brown Rice":{
 			calories:200,
 			totalFat:7,
 			saturated:0,
@@ -154,8 +143,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:3.5,
 			amount:0
 		},
-		{
-			name:"Black Beans",
+		"Black Beans":{
 			calories:120,
 			totalFat:1,
 			saturated:0,
@@ -168,8 +156,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:7,
 			amount:0
 		},
-		{
-			name:"Pinto Beans",
+		"Pinto Beans":{
 			calories:115,
 			totalFat:1,
 			saturated:0,
@@ -182,8 +169,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:6,
 			amount:0
 		},
-		{
-			name:"Fajita Veg",
+		"Fajita Vegetables":{
 			calories:20,
 			totalFat:0.5,
 			saturated:0,
@@ -196,8 +182,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:1,
 			amount:0
 		},
-		{
-			name:"Fresh Tomato Salsa",
+		"Fresh Tomato Salsa":{
 			calories:20,
 			totalFat:0,
 			saturated:0,
@@ -210,8 +195,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:1,
 			amount:0
 		},
-		{
-			name:"Roasted Chili-Corn Salsa",
+		"Roasted Chili-Corn Salsa":{
 			calories:80,
 			totalFat:1.5,
 			saturated:0,
@@ -224,8 +208,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:3,
 			amount:0
 		},
-		{
-			name:"Tomatillo Green-Chile Salsa",
+		"Tomatillo Green-Chile Salsa":{
 			calories:15,
 			totalFat:0,
 			saturated:0,
@@ -238,8 +221,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:0,
 			amount:0
 		},
-		{
-			name:"Tomatillo Red-Chile Salsa",
+		"Tomatillo Red-Chile Salsa":{
 			calories:30,
 			totalFat:0,
 			saturated:0,
@@ -252,8 +234,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:0,
 			amount:0
 		},
-		{
-			name:"Sour Cream",
+		"Sour Cream":{
 			calories:115,
 			totalFat:9.5,
 			saturated:7,
@@ -266,8 +247,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:2,
 			amount:0
 		},
-		{
-			name:"Cheese",
+		"Cheese":{
 			calories:100,
 			totalFat:7.5,
 			saturated:5,
@@ -280,8 +260,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:6,
 			amount:0
 		},
-		{
-			name:"Guacamole",
+		"Guacamole":{
 			calories:230,
 			totalFat:22,
 			saturated:3.5,
@@ -294,8 +273,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:2,
 			amount:0
 		},
-		{
-			name:"Lettuce",
+		"Lettuce":{
 			calories:10,
 			totalFat:0,
 			saturated:0,
@@ -308,7 +286,7 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 			protein:1,
 			amount:0
 		}
-	];
+	};
 	$scope.total = {
 			calories:0,
 			totalFat:0,
@@ -335,10 +313,23 @@ myApp.controller('MainController', ['$scope', '$modal', '$log', function($scope,
 		$scope.total.protein += $scope.ingredients[index].protein;
 	};
 
+	$scope.removeFromTotal = function(index){
+		$scope.ingredients[index].amount -= 1;
+		$scope.total.calories -= $scope.ingredients[index].calories;
+		$scope.total.totalFat -= $scope.ingredients[index].totalFat;
+		$scope.total.saturated -= $scope.ingredients[index].saturated;
+		$scope.total.trans -= $scope.ingredients[index].trans;
+		$scope.total.cholesterol -= $scope.ingredients[index].cholesterol;
+		$scope.total.sodium -= $scope.ingredients[index].sodium;
+		$scope.total.carbs -= $scope.ingredients[index].carbs;
+		$scope.total.fiber -= $scope.ingredients[index].fiber;
+		$scope.total.sugar -= $scope.ingredients[index].sugar;
+		$scope.total.protein -= $scope.ingredients[index].protein;
+	};
+
 	$scope.reset = function(){
-		for(var i=0;i<$scope.ingredients.length;i++){
-			var obj = $scope.ingredients[i];
-			obj.amount = 0;
+		for (key in $scope.ingredients){
+			$scope.ingredients[key].amount = 0;
 		}
 		for(key in $scope.total){
 			$scope.total[key] = 0;

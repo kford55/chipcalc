@@ -1,22 +1,110 @@
-<h3 ng-show="">Flour Tourtilla:   </h3>
-<h3 ng-show="">3 Crispy Corn Tortillas:    </h3>
-<h3 ng-show="">3 Soft Corn Tortillas:     </h3>
-<h3 ng-show="">3 Soft Flour Tortillas:     </h3>
-<h3 ng-show="">Chicken:    </h3>
-<h3 ng-show="">Steak:     </h3>
-<h3 ng-show="">Carnitas:       </h3>
-<h3 ng-show="">Barbacoa:      </h3>
-<h3 ng-show="">Sofritas:       </h3>
-<h3 ng-show="">White Rice:        </h3>
-<h3 ng-show="">Brown Rice:        </h3>
-<h3 ng-show="">Black Beans:  		</h3>
-<h3 ng-show="">Pinto Beans:		</h3>
-<h3 ng-show="">Fajita Vegetables:		</h3>
-<h3 ng-show="">Fresh Tomato Salsa:		</h3>
-<h3 ng-show="">Roasted Chili-Corn Salsa:		</h3>
-<h3 ng-show="">Tomatillo Green-Chili Salsa:		</h3>
-<h3 ng-show="">Tomatillo Red-Chili Salsa:		</h3>
-<h3 ng-show="">Sour Cream:  	</h3>
-<h3 ng-show="">Cheese:		</h3>
-<h3 ng-show="">Guacamole: 		</h3>
-<h3 ng-show="">Lettuce:		</h3>
+<div class="radio">
+	<form> 
+		<div>
+		  <label for="burrito" style="display:inline-block">Burrito</label>
+		  <input id="burrito" type="radio" name="content" ng-model="content" value="burrito">
+		</div>
+		<div>
+		  <label for="bowl">Burrito Bowl</label>
+		  <input id="bowl" type="radio" name="content" ng-model="content" value="bowl">
+		</div>
+		<div>  
+		  <label for="taco">Tacos</label>
+		  <input id="taco" type="radio" name="content" ng-model="content" value="tacos">
+		</div>
+		<div>  
+		  <label for="salad">Salad</label>
+		  <input id="salad" type="radio" name="content" ng-model="content" value="salad">
+		</div>
+	</form>
+</div>
+<div>
+	<div class = "ingredient" ng-show="content == 'burrito'">
+	<h3>Flour Tortilla:    {{ingred['Flour Tortilla'].amount}}</h3>
+	<button ng-click="func('Flour Tortilla')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="content == 'tacos'">
+	<h3>3 Crispy Corn Tortillas:    {{ingred['3 Crispy Corn Tortillas'].amount}}</h3>
+	<button ng-click="func('3 Crispy Corn Tortillas')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="content == 'tacos'">
+	<h3>3 Soft Corn Tortillas:    {{ingred['3 Soft Corn Tortillas'].amount}}</h3>
+	<button ng-click="func('3 Soft Corn Tortillas')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="content == 'tacos'">
+	<h3>3 Soft Flour Tortillas:     {{ingred['3 Soft Flour Tortillas'].amount}}</h3>
+	<button ng-click="func('3 Soft Flour Tortillas')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Chicken:    {{ingred['Chicken'].amount}}</h3>
+	<button ng-click="func('Chicken')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Steak:    {{ingred['Steak'].amount}}</h3>
+	<button ng-click="func('Steak')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Carnitas:    {{ingred['Carnitas'].amount}}</h3>
+	<button ng-click="func('Carnitas')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Barbacoa:    {{ingred['Barbacoa'].amount}}</h3>
+	<button ng-click="func('Barbacoa')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Sofritas:    {{ingred['Sofritas'].amount}}</h3>
+	<button ng-click="func('Sofritas')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>White Rice:    {{ingred['White Rice'].amount}}</h3>
+	<button ng-click="func('White Rice')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Brown Rice:    {{ingred['Brown Rice'].amount}}</h3>
+	<button ng-click="func('Brown Rice')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Black Beans:    {{ingred['Black Beans'].amount}}</h3>
+	<button ng-click="func('Black Beans')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Pinto Beans:    {{ingred['Pinto Beans'].amount}}</h3>
+	<button ng-click="func('Pinto Beans')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Fajita Vegetables:    {{ingred['Fajita Vegetables'].amount}}</h3>
+	<button ng-click="func('Fajita Vegetables')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Fresh Tomato Salsa:    {{ingred['Fresh Tomato Salsa'].amount}}</h3>
+	<button ng-click="func('Fresh Tomato Salsa')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Roasted Chili-Corn Salsa:    {{ingred['Roasted Chili-Corn Salsa'].amount}}</h3>
+	<button ng-click="func('Roasted Chili-Corn Salsa')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Tomatillo Green-Chili Salsa:    {{ingred['Tomatillo Green-Chili Salsa'].amount}}</h3>
+	<button ng-click="func('Tomatillo Green-Chili Salsa')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Tomatillo Red-Chili Salsa:    {{ingred['Tomatillo Red-Chili Salsa'].amount}}</h3>
+	<button ng-click="func('Tomatillo Red-Chili Salsa')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Sour Cream:    {{ingred['Sour Cream'].amount}}</h3>
+	<button ng-click="func('Sour Cream')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Cheese:    {{ingred['Cheese'].amount}}</h3>
+	<button ng-click="func('Cheese')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Guacamole:    {{ingred['Guacamole'].amount}}</h3>
+	<button ng-click="func('Guacamole')">Add To Total</button>
+	</div>
+	<div class = "ingredient" ng-show="!(content == null)">
+	<h3>Lettuce:    {{ingred['Lettuce'].amount}}</h3>
+	<button ng-click="func('Lettuce')">Add To Total</button>
+	</div>
+</div>
